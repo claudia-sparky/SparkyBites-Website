@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkyBites</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- LOGIN SCREEN -->
+    <div id="login-screen" class="screen active">
+        <div class="login-box">
+            <h1 class="logo">Sparky<span>Bites</span></h1>
+
+            <input id="email" type="text" placeholder="Email or Phone">
+            <input id="password" type="password" placeholder="Password">
+
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <!-- MENU SCREEN -->
+    <div id="menu-screen" class="screen">
+        <header>
+            <h2>Welcome to <span>SparkyBites</span> 😋</h2>
+            <button id="cart-btn" onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+        </header>
+
+        <div class="menu-grid" id="menu-list"></div>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- CART MODAL -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+
+            <div class="cart-footer">
+                <p>Total: <strong id="cart-total">KES 0</strong></p>
+                <button onclick="checkout()">Checkout</button>
+                <button class="close-btn" onclick="closeCart()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ORDER STATUS SCREEN -->
+    <div id="order-screen" class="screen">
+        <h1>Order Status 🔥</h1>
+        <p id="order-status-text">Preparing your meal...</p>
+        <button onclick="backToMenu()">Back to Menu</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
